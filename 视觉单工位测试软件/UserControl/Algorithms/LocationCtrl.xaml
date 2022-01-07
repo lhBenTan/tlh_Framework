@@ -1,0 +1,179 @@
+﻿<UserControl x:Class="视觉单工位测试软件.LocationCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:local="clr-namespace:视觉单工位测试软件"
+             mc:Ignorable="d" 
+             FontSize="20"
+             d:DesignWidth="200">
+    <Viewbox >
+        <Grid Width="200" >
+            <StackPanel >
+                
+                <Grid Margin="2,5,2,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="图像显示" VerticalAlignment="Center" Grid.Column="0"/>
+                    <Viewbox Grid.Column="1" Stretch="Fill">
+                        <ComboBox Width="150" SelectedIndex="{Binding IsShow,UpdateSourceTrigger=LostFocus,Mode=TwoWay}">
+                            <ComboBoxItem Content="显示"/>
+                            <ComboBoxItem Content="隐藏"/>
+                        </ComboBox>
+                    </Viewbox>
+                </Grid>
+
+                <Grid Margin="2,5,2,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="预设X坐标" VerticalAlignment="Center" Grid.Column="0"/>
+                    <Viewbox Grid.Column="1" Stretch="Fill">
+                        <hc:NumericUpDown DecimalPlaces="3" 
+                                          Value="{Binding DefaultX,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                          Width="150" 
+                                          Style="{StaticResource NumericUpDownPlus}" 
+                                          hc:InfoElement.Necessary="True"/>
+                        <!--<TextBox Width="150" TextAlignment="Right" Text="{Binding DefaultX,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"/>-->
+                    </Viewbox>
+                </Grid>
+
+                <Grid Margin="2,5,2,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="预设Y坐标" VerticalAlignment="Center" Grid.Column="0"/>
+                    <Viewbox Grid.Column="1" Stretch="Fill">
+                        <hc:NumericUpDown DecimalPlaces="3" 
+                                          Value="{Binding DefaultY,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                          Width="150" 
+                                          Style="{StaticResource NumericUpDownPlus}" 
+                                          hc:InfoElement.Necessary="True"/>
+                        <!--<TextBox Width="150" TextAlignment="Right" Text="{Binding DefaultY,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"/>-->
+                    </Viewbox>
+                </Grid>
+
+                <Grid Margin="2,5,2,0" Visibility="{Binding Authority,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="比例尺" VerticalAlignment="Center" Grid.Column="0"/>
+                    <Viewbox Grid.Column="1" Stretch="Fill">
+                        <hc:NumericUpDown DecimalPlaces="3" 
+                                          Increment ="0.001"
+                                          Value="{Binding Scale,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                          Width="150" 
+                                          Style="{StaticResource NumericUpDownPlus}" 
+                                          hc:InfoElement.Necessary="True"/>
+                        <!--<TextBox Width="150" TextAlignment="Right" Text="{Binding Scale,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"/>-->
+                    </Viewbox>
+                </Grid>
+
+                <Grid Margin="2,5,2,0" Visibility="{Binding Authority,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="偏移量上限" VerticalAlignment="Center" Grid.Column="0"/>
+                    <Viewbox Grid.Column="1" Stretch="Fill">
+                        <hc:NumericUpDown DecimalPlaces="3" 
+                                          Increment ="0.001"
+                                          Value="{Binding MaxOffset,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                          Width="150" 
+                                          Style="{StaticResource NumericUpDownPlus}" 
+                                          hc:InfoElement.Necessary="True"/>
+                        <!--<TextBox Width="150" TextAlignment="Right" Text="{Binding MaxOffset,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"/>-->
+                    </Viewbox>
+                </Grid>
+
+                <Grid Margin="2,5,2,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="半径上限" VerticalAlignment="Center" Grid.Column="0"/>
+                    <Viewbox Grid.Column="1" Stretch="Fill">
+                        <hc:NumericUpDown DecimalPlaces="2" 
+                                          Value="{Binding MaxRadius,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                          Width="150" 
+                                          Style="{StaticResource NumericUpDownPlus}" 
+                                          hc:InfoElement.Necessary="True"/>
+                        <!--<TextBox Width="150" TextAlignment="Right" Text="{Binding MaxRadius,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"/>-->
+                    </Viewbox>
+                </Grid>
+
+                <Grid Margin="2,5,2,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="半径下限" VerticalAlignment="Center" Grid.Column="0"/>
+                    <Viewbox Grid.Column="1" Stretch="Fill">
+                        <hc:NumericUpDown DecimalPlaces="2" 
+                                          Value="{Binding MinRadius,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                          Width="150" 
+                                          Style="{StaticResource NumericUpDownPlus}" 
+                                          hc:InfoElement.Necessary="True"/>
+                        <!--<TextBox Width="150" TextAlignment="Right" Text="{Binding MinRadius,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"/>-->
+                    </Viewbox>
+                </Grid>
+
+                <Grid Margin="2,5,2,0" Visibility="Collapsed">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="识别阈值" VerticalAlignment="Center" Grid.Column="0"/>
+                    <Viewbox Grid.Column="1" Stretch="Fill">
+                        <TextBox Width="150" TextAlignment="Right" Text="{Binding Threshold,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"/>
+                    </Viewbox>
+                </Grid>
+
+                <Grid Margin="2,5,2,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="灰度范围" VerticalAlignment="Center" Grid.Column="0"/>
+                    <Viewbox Grid.Column="1">
+                        <!--<local:RangeSlider x:Name="SLA_V" 
+                                           Minimum="0"
+                                           Maximum="360"
+                                           StartValue="{Binding Threshold,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                           EndValue="{Binding Threshold_INV,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                           HorizontalAlignment="Center"/>-->
+                        <hc:RangeSlider Width="100"  
+                                        hc:TipElement.Visibility="Visible" 
+                                        hc:TipElement.Placement="Top" 
+                                        hc:TipElement.StringFormat="#0" 
+                                        IsSnapToTickEnabled="False" 
+                                        Maximum="255" 
+                                        ValueStart="{Binding Threshold,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                        ValueEnd="{Binding Threshold_INV,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                        TickFrequency="10"/>
+
+                    </Viewbox>
+                </Grid>
+
+                <Grid Margin="2,5,2,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="边界颜色" VerticalAlignment="Center" Grid.Column="0"/>
+                    <Viewbox Grid.Column="1" Stretch="Fill">
+                        <TextBlock Width="150" Background="Green"/>
+                    </Viewbox>
+                </Grid>
+
+                <Grid/>
+            </StackPanel>
+        </Grid>
+    </Viewbox>
+</UserControl>

@@ -1,0 +1,124 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+  pch.cpp
+  CVAlgorithms.cpp
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.h(36): warning C4091: “typedef ”: 没有声明变量时忽略“circleInfo”的左侧
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(176): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(177): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(178): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(179): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(180): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(181): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(182): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(203): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(204): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(221): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(222): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(227): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(262): warning C4244: “参数”: 从“float”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(262): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(282): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(288): warning C4244: “参数”: 从“float”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(307): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(308): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(309): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(310): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(311): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(339): warning C4244: “参数”: 从“float”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(371): warning C4244: “参数”: 从“float”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(380): warning C4244: “初始化”: 从“_Tp”转换到“int”，可能丢失数据
+          with
+          [
+              _Tp=double
+          ]
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(381): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(389): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(390): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(392): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(397): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(398): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(413): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(414): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(416): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(421): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(422): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(436): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(455): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(456): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(457): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(458): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(459): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(460): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(492): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(493): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(497): warning C4244: “参数”: 从“float”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(510): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(518): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(519): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(531): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(536): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(537): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(556): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(557): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(594): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  dllmain.cpp
+  interface.cpp
+  metrogolyCircle.cpp
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.h(36): warning C4091: “typedef ”: 没有声明变量时忽略“circleInfo”的左侧
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.cpp(14): warning C4244: “参数”: 从“_Tp”转换到“float”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.cpp(59): warning C4244: “参数”: 从“int”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=float
+          ]
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.cpp(60): warning C4244: “参数”: 从“int”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=float
+          ]
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.cpp(63): warning C4244: “参数”: 从“int”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=float
+          ]
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.cpp(64): warning C4244: “参数”: 从“int”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=float
+          ]
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.cpp(133): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.cpp(135): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.cpp(186): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.cpp(187): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.cpp(192): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.cpp(259): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\metrogolycircle.cpp(261): warning C4018: “>”: 有符号/无符号不匹配
+  putText.cpp
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\puttext.cpp(124): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  正在生成代码...
+c:\users\administrator\source\repos\lhbentan\tlh_framework\dll4cs\cvalgorithms.cpp(571): warning C4715: “angle”: 不是所有的控件路径都返回值
+    正在创建库 ..\视觉单工位测试软件\bin\Debug\DLL4CS.lib 和对象 ..\视觉单工位测试软件\bin\Debug\DLL4CS.exp
+  DLL4CS.vcxproj -> C:\Users\Administrator\source\repos\lhBenTan\tlh_Framework\DLL4CS\..\视觉单工位测试软件\bin\Debug\DLL4CS.dll

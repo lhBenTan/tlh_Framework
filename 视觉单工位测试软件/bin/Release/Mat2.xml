@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StdValue>
+  <isGray>1</isGray>
+  <IsShow>1</IsShow>
+  <MaxRadius>400</MaxRadius>
+  <MinRadius>385</MinRadius>
+  <Threshold>200</Threshold>
+  <Threshold_INV>255</Threshold_INV>
+  <MatchingRate>1</MatchingRate>
+  <Color>1</Color>
+  <Name>正反识别</Name>
+  <ErrInf>镜片正反异常!</ErrInf>
+</StdValue>

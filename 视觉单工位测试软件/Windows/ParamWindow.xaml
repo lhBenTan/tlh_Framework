@@ -1,0 +1,69 @@
+﻿<Window x:Class="视觉单工位测试软件.ParamWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:视觉单工位测试软件"
+        mc:Ignorable="d"
+        WindowStyle="ToolWindow"
+        Title="设置" 
+        Topmost="True"
+        Height="600" Width="450">
+    <Window.Resources>
+        
+    </Window.Resources>
+    <StackPanel>
+        
+        <Grid Margin="2,5,2,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="权限管理" VerticalAlignment="Center" Grid.Column="0"/>
+            <ComboBox Grid.Column="1" SelectedIndex="{Binding Authority,UpdateSourceTrigger=LostFocus,Mode=TwoWay}">
+                <ComboBoxItem Content="普通"/>
+                <ComboBoxItem Content="高级"/>
+            </ComboBox>
+        </Grid>
+        
+        <TabControl FontSize="10" SelectionChanged="TabControl_SelectionChanged">
+
+            <TabItem Header="定位">
+                <local:LocationCtrl DataContext="{Binding viewModel[0]}"/>
+            </TabItem>
+
+            <TabItem Header="匹配" >
+                <TabControl   UseLayoutRounding="True" SelectionChanged="TabControl_SelectionChanged_1">
+                    <TabItem Header="{Binding viewModel[1].Name}">
+                        <local:MatchCtrl DataContext="{Binding viewModel[1]}"/>
+                    </TabItem>
+
+                    <TabItem Header="{Binding viewModel[2].Name}">
+                        <local:MatchCtrl DataContext="{Binding viewModel[2]}"/>
+                    </TabItem>
+
+                    <TabItem Header="{Binding viewModel[3].Name}">
+                        <local:MatchCtrl DataContext="{Binding viewModel[3]}"/>
+                    </TabItem>
+
+                    <TabItem Header="{Binding viewModel[4].Name}">
+                        <local:MatchCtrl DataContext="{Binding viewModel[4]}"/>
+                    </TabItem>
+
+                    <TabItem Header="{Binding viewModel[5].Name}">
+                        <local:MatchCtrl DataContext="{Binding viewModel[5]}"/>
+                    </TabItem>
+
+                    <TabItem Header="{Binding viewModel[6].Name}">
+                        <local:MatchCtrl DataContext="{Binding viewModel[6]}"/>
+                    </TabItem>
+                </TabControl>
+            </TabItem>
+
+            <TabItem Header="角度">
+                <local:AngleContrl DataContext="{Binding viewModel[7]}"/>
+            </TabItem>
+        </TabControl>
+    </StackPanel>
+    
+</Window>

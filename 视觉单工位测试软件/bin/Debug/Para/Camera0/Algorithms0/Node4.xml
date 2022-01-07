@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Node>
+  <isGray>0</isGray>
+  <Threshold>0</Threshold>
+  <Threshold_INV>153</Threshold_INV>
+  <MaxRadius>2147483647</MaxRadius>
+  <MinRadius>2147483647</MinRadius>
+  <MaxLen>360</MaxLen>
+  <MinLen>0</MinLen>
+</Node>

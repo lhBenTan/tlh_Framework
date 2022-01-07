@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StdValue>
+  <isGray>1</isGray>
+  <IsShow>1</IsShow>
+  <MaxRadius>350</MaxRadius>
+  <MinRadius>230</MinRadius>
+  <Threshold>0</Threshold>
+  <Threshold_INV>255</Threshold_INV>
+  <MatchingRate>1</MatchingRate>
+  <Color>2</Color>
+  <Name>902</Name>
+  <ErrInf>漏组902镜片</ErrInf>
+</StdValue>

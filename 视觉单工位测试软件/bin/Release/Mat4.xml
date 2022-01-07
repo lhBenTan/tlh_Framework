@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StdValue>
+  <isGray>1</isGray>
+  <IsShow>1</IsShow>
+  <MaxRadius>280</MaxRadius>
+  <MinRadius>270</MinRadius>
+  <Threshold>0</Threshold>
+  <Threshold_INV>0</Threshold_INV>
+  <MatchingRate>0</MatchingRate>
+  <Color>3</Color>
+  <Name>未启用</Name>
+  <ErrInf>0</ErrInf>
+</StdValue>

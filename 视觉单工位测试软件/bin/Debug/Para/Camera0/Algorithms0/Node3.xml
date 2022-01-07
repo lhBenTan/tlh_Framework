@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Node>
+  <isGray>1</isGray>
+  <IsShow>1</IsShow>
+  <MaxRadius>2</MaxRadius>
+  <MinRadius>5</MinRadius>
+  <Threshold>0</Threshold>
+  <Threshold_INV>255</Threshold_INV>
+  <MatchingRate>0.5</MatchingRate>
+  <Color>0</Color>
+  <Name>不知道啥</Name>
+  <ErrInf></ErrInf>
+</Node>

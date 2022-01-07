@@ -1,0 +1,8 @@
+LIBRARY DLL4CS
+EXPORTS
+
+MV_Upload @1
+MV_EntryPoint @2
+MV_Download	@3
+MV_TextOut	@4
+MV_Release @5

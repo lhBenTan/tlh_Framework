@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StdValue>
+  <IsShow>1</IsShow>
+  <DefaultX>639</DefaultX>
+  <DefaultY>517</DefaultY>
+  <Scale>0.01</Scale>
+  <MaxOffset>1</MaxOffset>
+  <MaxRadius>480</MaxRadius>
+  <MinRadius>460</MinRadius>
+  <Threshold>80</Threshold>
+</StdValue>

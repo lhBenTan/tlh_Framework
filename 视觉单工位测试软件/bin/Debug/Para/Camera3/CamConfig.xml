@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CamConfig>
+  <AlgNum>1</AlgNum>
+  <Name>未命名</Name>
+  <Exposure>100</Exposure>
+  <Gain>100</Gain>
+  <Delay>100</Delay>
+  <PreDelay>100</PreDelay>
+  <SelectedCam>3</SelectedCam>
+</CamConfig>

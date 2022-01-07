@@ -1,0 +1,313 @@
+﻿<Window x:Class="视觉单工位测试软件.ConfigWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:hc="clr-namespace:HandyControl.Controls;assembly=HandyControl"
+        xmlns:local="clr-namespace:视觉单工位测试软件"
+        mc:Ignorable="d"
+        Topmost="True"
+        ResizeMode="NoResize"
+        WindowStyle="ToolWindow"
+        FontSize="20"
+        Title="软件配置" 
+        d:DesignHeight="800" 
+        Width="400">
+    <Window.Resources>
+        <local:TabNumConv x:Key="TabNumConv" />
+    </Window.Resources>
+    <TabControl>
+        
+        <TabItem Header="通讯">
+            <StackPanel>
+                <hc:TabControl>
+
+                    <hc:TabItem Header="本地设置">
+
+                    </hc:TabItem>
+
+                    <hc:TabItem Header="通讯端口一">
+
+
+                    </hc:TabItem>
+
+                    <hc:TabItem Header="通讯端口二">
+
+                    </hc:TabItem>
+
+                    <hc:TabItem Header="通讯端口三">
+
+                    </hc:TabItem>
+
+                    <hc:TabItem Header="通讯端口四">
+
+                    </hc:TabItem>
+
+                </hc:TabControl>
+            </StackPanel>
+        </TabItem>
+
+        <TabItem Header="相机">
+            <DockPanel>
+                
+                <Grid DockPanel.Dock="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <hc:ComboBox SelectedIndex="{Binding CamNum}" 
+                                 Margin="5"
+                                 hc:InfoElement.TitlePlacement="Left" 
+                                 hc:InfoElement.Title="相机数     ">
+                        <ComboBoxItem Content="1"/>
+                        <ComboBoxItem Content="2"/>
+                        <ComboBoxItem Content="3"/>
+                        <ComboBoxItem Content="4"/>
+                        <ComboBoxItem Content="5"/>
+                        <ComboBoxItem Content="6"/>
+                        <ComboBoxItem Content="7"/>
+                        <ComboBoxItem Content="8"/>
+                        <ComboBoxItem Content="9"/>
+                        <ComboBoxItem Content="10"/>
+                        <ComboBoxItem Content="11"/>
+                        <ComboBoxItem Content="12"/>
+                        <ComboBoxItem Content="13"/>
+                        <ComboBoxItem Content="14"/>
+                        <ComboBoxItem Content="15"/>
+                        <ComboBoxItem Content="16"/>
+                    </hc:ComboBox>
+                </Grid>
+
+                <StackPanel>
+
+                    <hc:TabControl ShowOverflowButton="False" 
+                                   SelectedIndex="{Binding SeletedCam}"
+                                   IsScrollable="True"
+                                   ShowScrollButton="True">
+
+                        <hc:TabItem Header="相机1" TabIndex="0">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[0]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+                            
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0" DataContext="{Binding camParamViewModel}"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机2" TabIndex="1">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[1]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机3" TabIndex="2">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[2]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机4" TabIndex="3">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[3]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机5" TabIndex="4">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[4]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机6" TabIndex="5">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[6]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机7" TabIndex="6">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[6]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机8" TabIndex="7">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[7]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机9" TabIndex="8">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[8]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机10" TabIndex="9">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[9]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机11" TabIndex="10">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[10]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机12" TabIndex="11">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[11]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机13" TabIndex="12">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[12]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机14" TabIndex="13">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[13]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机15" TabIndex="14">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[14]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+
+                        <hc:TabItem Header="相机16" TabIndex="15">
+                            <TabItem.Visibility>
+                                <MultiBinding Converter="{StaticResource TabNumConv}">
+                                    <Binding Path="CamNum" />
+                                    <Binding Path="CamID[15]" />
+                                </MultiBinding>
+                            </TabItem.Visibility>
+
+                            <!--<hc:ScrollViewer VerticalAlignment="Top">
+                                <local:CamConfigCtrl Margin="5,0"/>
+                            </hc:ScrollViewer>-->
+                        </hc:TabItem>
+                        
+                    </hc:TabControl>
+
+
+                    <hc:ScrollViewer VerticalAlignment="Top">
+                        <local:CamConfigCtrl Margin="5,0"/>
+                    </hc:ScrollViewer>
+                </StackPanel>
+                
+            </DockPanel>
+        </TabItem>
+
+        <TabItem Header="路径"/>
+
+        <TabItem Header="权限"/>
+
+    </TabControl>
+</Window>

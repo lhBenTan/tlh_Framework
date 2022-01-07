@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="视觉单工位测试软件.CamConfigCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:视觉单工位测试软件"
+             mc:Ignorable="d" 
+             FontSize="15"
+             d:DesignWidth="300">
+    <Viewbox>
+        <StackPanel Width="300" VerticalAlignment="Top">
+
+            <Grid Margin="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="相机选择" Grid.Column="0" VerticalAlignment="Center"/>
+                <ComboBox Grid.Column="1"
+                          ItemsSource="{Binding camParamViewModel.camInfos}"
+                          SelectedIndex="{Binding camParamViewModel.SelectedCam, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                          SelectedValuePath="ID"
+                          DisplayMemberPath="Name"/>
+            </Grid>
+
+            <Grid Margin="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="通讯端口" Grid.Column="0" VerticalAlignment="Center"/>
+                <ComboBox Grid.Column="1" SelectedIndex="0">
+                    <ComboBoxItem Content="端口一"/>
+                    <ComboBoxItem Content="端口二"/>
+                    <ComboBoxItem Content="端口三"/>
+                    <ComboBoxItem Content="端口四"/>
+                </ComboBox>
+            </Grid>
+
+
+            <Grid Margin="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="相机曝光" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="1"/>
+            </Grid>
+
+            <Grid Margin="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="相机增益" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="1"/>
+            </Grid>
+
+            <!--相机对光源的触发方式直接写死，避免修改-->
+            <Grid Margin="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="触发延时" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="1"/>
+            </Grid>
+
+            <Grid Margin="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="触发预延时" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="1"/>
+            </Grid>
+
+
+           
+
+
+
+
+                <Expander Header="相机设置" Visibility="Collapsed">
+                <StackPanel>
+
+                    
+                </StackPanel>
+            </Expander>
+            
+            
+            
+            
+        </StackPanel>
+    </Viewbox>
+</UserControl>

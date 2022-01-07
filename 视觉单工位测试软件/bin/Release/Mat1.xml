@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StdValue>
+  <isGray>1</isGray>
+  <IsShow>1</IsShow>
+  <MaxRadius>375</MaxRadius>
+  <MinRadius>350</MinRadius>
+  <Threshold>40</Threshold>
+  <Threshold_INV>255</Threshold_INV>
+  <MatchingRate>0</MatchingRate>
+  <Color>5</Color>
+  <Name>涂墨</Name>
+  <ErrInf>镜片涂墨异常</ErrInf>
+</StdValue>

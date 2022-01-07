@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="视觉单工位测试软件.HomeWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:local="clr-namespace:视觉单工位测试软件"
+             mc:Ignorable="d" 
+             FontSize="20"
+             d:DesignHeight="450" 
+             d:DesignWidth="800">
+    <Viewbox>
+        <DockPanel Height="450" Width="800">
+            
+            <Grid DockPanel.Dock="Right" Width="150" Visibility="Visible">
+                <hc:ScrollViewer VerticalAlignment="Top">
+                    <local:ParamCtrl DataContext="{Binding camParamViewModel}"/>
+                </hc:ScrollViewer>
+            </Grid>
+
+            <Border DockPanel.Dock="Left" 
+                    Width="150" 
+                    Visibility="Visible" 
+                    VerticalAlignment="Top">
+                <local:MenuCtrl/>
+            </Border>
+
+            <Grid DockPanel.Dock="Bottom" Height="100" Visibility="Collapsed">
+                <TextBlock Background="Black" 
+                           FontSize="10"
+                           Foreground="White"
+                           Text="文字输出"
+                           Margin="2"/>
+            </Grid>
+
+            <Grid x:Name="grid" Tag="{Binding SeletedCam,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"/>
+            
+        </DockPanel>
+    </Viewbox>
+</UserControl>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Config>
+  <CamNum>1</CamNum>
+  <Net-0>
+    <IP>192.168.1.1</IP>
+    <Port>1000</Port>
+    <IsUsing>false</IsUsing>
+    <HeartBeat>1000</HeartBeat>
+  </Net-0>
+  <Net-1>
+    <IP>192.168.1.1</IP>
+    <Port>1000</Port>
+    <IsUsing>false</IsUsing>
+    <HeartBeat>1000</HeartBeat>
+  </Net-1>
+  <Net-2>
+    <IP>192.168.1.1</IP>
+    <Port>1000</Port>
+    <IsUsing>false</IsUsing>
+    <HeartBeat>1000</HeartBeat>
+  </Net-2>
+  <Net-3>
+    <IP>192.168.1.1</IP>
+    <Port>1000</Port>
+    <IsUsing>false</IsUsing>
+    <HeartBeat>1000</HeartBeat>
+  </Net-3>
+</Config>

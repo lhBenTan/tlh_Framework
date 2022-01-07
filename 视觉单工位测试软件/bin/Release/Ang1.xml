@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StdValue>
+  <isGray>0</isGray>
+  <Threshold>0</Threshold>
+  <Threshold_INV>159</Threshold_INV>
+  <MaxRadius>474</MaxRadius>
+  <MinRadius>465</MinRadius>
+  <MaxLen>50</MaxLen>
+  <MinLen>30</MinLen>
+</StdValue>
