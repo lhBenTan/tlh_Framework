@@ -73,6 +73,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Common\HiKhelper.cs" />
+    <Compile Include="Core\Annotations.cs" />
+    <Compile Include="Core\AsyncTCPClient.cs" />
+    <Compile Include="Core\AsyncTCPServer.cs" />
+    <Compile Include="Core\AsyncUDPServer.cs" />
+    <Compile Include="Core\AwaiterInterfaces.cs" />
+    <Compile Include="Core\DatabaseHelper.cs" />
+    <Compile Include="Core\DispatcherAsyncOperation.cs" />
+    <Compile Include="Core\HikHelper.cs" />
+    <Compile Include="Core\UIDispatcher.cs" />
     <Compile Include="Windows\NodeMenuWindow.xaml.cs">
       <DependentUpon>NodeMenuWindow.xaml</DependentUpon>
     </Compile>

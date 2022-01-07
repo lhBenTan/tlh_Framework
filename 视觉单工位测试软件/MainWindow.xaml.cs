@@ -60,7 +60,7 @@ namespace 视觉单工位测试软件
                 this.DataContext = mainVM;
             };
 
-            
+            //////////////////////////////
         }
         
     }
