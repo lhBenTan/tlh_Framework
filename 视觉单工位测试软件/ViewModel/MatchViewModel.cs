@@ -14,19 +14,19 @@ namespace 视觉单工位测试软件
         #region 构造函数
         public MatchViewModel()
         {
-            Name_C = "圆周匹配";
+            Name_C = "圆周灰度匹配";
             Authority = Visibility.Collapsed;
             ClassType = 2;
 
-            IsGray = 1;
-            IsShow = 1;
+            IsGray = -1;
+            IsShow = -1;
 
             MaxRadius = float.MaxValue;
             MinRadius = float.MaxValue;
-            Threshold = 0;
-            Threshold_INV = 255;
+            Threshold = 255;
+            Threshold_INV = 0;
             MatchingRate = 0.5F;
-            Color = 0;
+            Color = -1;
         }
         #endregion
         
@@ -158,6 +158,7 @@ namespace 视觉单工位测试软件
             get => GetProperty(() => Name);
             set => SetProperty(() => Name, value,()=>
             {
+                Name_C = "圆周灰度匹配-" + Name;
                 Config.Descendants("Name").ElementAt(0).SetValue(value);
                 Config.Save(Path);
             });
@@ -186,6 +187,15 @@ namespace 视觉单工位测试软件
         #region 公有方法
         public override int Function()
         {
+            str[0] = IsGray.ToString();
+            str[1] = IsShow.ToString();
+            str[2] = MaxRadius.ToString();
+            str[3] = MinRadius.ToString();
+            str[4] = Threshold.ToString();
+            str[5] = Threshold_INV.ToString();
+            str[6] = MatchingRate.ToString();
+            str[7] = Color.ToString();
+
             float[] reParam = new float[1];
             try
             {

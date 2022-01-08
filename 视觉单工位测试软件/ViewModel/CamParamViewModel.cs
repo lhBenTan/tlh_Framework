@@ -31,6 +31,8 @@ namespace 视觉单工位测试软件.ViewModel
         /// </summary>
         private static readonly object objlock = new object();
 
+        CVAlgorithms.BmpBuf bmpBuf = new CVAlgorithms.BmpBuf();
+
         /// <summary>
         /// 线程执行函数
         /// </summary>
@@ -38,13 +40,28 @@ namespace 视觉单工位测试软件.ViewModel
         /// <param name="e"></param>
         private void MV_STPAction(int i, HiKhelper.MV_IM_INFO e)
         {
+
+            bmpBuf.Width = e.width;
+            bmpBuf.Height = e.height;
+            CVAlgorithms.MV_Upload(e.width, e.height, ref bmpBuf, 3);
+
+            
+            foreach (var item in AlgPros.ElementAt(0).ProList)
+            {
+                if (0 != item.Function()) break;
+            }
+            CVAlgorithms.MV_Download(ref bmpBuf);
+            
             //显示
             Application.Current.Dispatcher.Invoke(() =>
             {
-                int size = e.height * e.width * 3;
-                if (ImSrc_test == null || ImSrc_test.Width != e.width || ImSrc_test.Height != e.height)
+               int size = e.nFrameLen;
+                if (ImSrc_test == null || ImSrc_test.Width != bmpBuf.Width || ImSrc_test.Height != bmpBuf.Height)
                 {
-                    ImSrc_test = new WriteableBitmap(e.width, e.height, 96.0, 96.0, PixelFormats.Bgr24, null);
+                    if (size > 3 * bmpBuf.Width * bmpBuf.Height / 2) 
+                        ImSrc_test = new WriteableBitmap(bmpBuf.Width, bmpBuf.Height, 96.0, 96.0, PixelFormats.Bgr24, null);
+                    else
+                        ImSrc_test = new WriteableBitmap(bmpBuf.Width, bmpBuf.Height, 24.0, 24.0, PixelFormats.Gray8, null);
                 }
                 
                 lock (objlock)
@@ -52,15 +69,16 @@ namespace 视觉单工位测试软件.ViewModel
                     if ((e.pData != (IntPtr)0x00000000))
                     {
                         ImSrc_test.Lock();
-                        ImSrc_test.WritePixels(new Int32Rect(0, 0, e.width, e.height), e.pData, size, ImSrc_test.BackBufferStride);
-                        // Buffer.MemoryCopy(info.data.ToPointer(), ImSrc.BackBuffer.ToPointer(), info.size, info.size);
-                        // CVAlgorithms.RtlMoveMemory(ImSrc.BackBuffer, info.data, (uint)info.size);
-                        ImSrc_test.AddDirtyRect(new Int32Rect(0, 0, e.width, e.height));
+                        ImSrc_test.WritePixels(new Int32Rect(0, 0, bmpBuf.Width, bmpBuf.Height), bmpBuf.pData, size, ImSrc_test.BackBufferStride);
+                        ImSrc_test.AddDirtyRect(new Int32Rect(0, 0, bmpBuf.Width, bmpBuf.Height));
                         ImSrc_test.Unlock();
 
                     }
                 }
             });
+
+            //这里是固定的
+            CVAlgorithms.MV_Release(ref bmpBuf);
         }
 
         /// <summary>

@@ -2,12 +2,12 @@
 <Node>
   <isGray>1</isGray>
   <IsShow>1</IsShow>
-  <MaxRadius>2</MaxRadius>
-  <MinRadius>5</MinRadius>
+  <MaxRadius>200</MaxRadius>
+  <MinRadius>100</MinRadius>
   <Threshold>0</Threshold>
   <Threshold_INV>255</Threshold_INV>
-  <MatchingRate>0.5</MatchingRate>
-  <Color>0</Color>
-  <Name>不知道啥</Name>
-  <ErrInf></ErrInf>
+  <MatchingRate>0</MatchingRate>
+  <Color>3</Color>
+  <Name>暂定</Name>
+  <ErrInf>未知错误</ErrInf>
 </Node>

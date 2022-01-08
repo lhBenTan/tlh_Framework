@@ -193,6 +193,15 @@ namespace 视觉单工位测试软件
         #region 覆写方法
         public override int Function()
         {
+            str[0] = IsShow.ToString();
+            str[1] = DefaultX.ToString();
+            str[2] = DefaultY.ToString();
+            str[3] = Scale.ToString();
+            str[4] = MaxOffset.ToString();
+            str[5] = MaxRadius.ToString();
+            str[6] = MinRadius.ToString();
+            str[7] = Threshold.ToString();
+
             float[] reParam = new float[5];
             bool ret;//= CVAlgorithms.MV_EntryPoint(0, str, ref reParam[0]);
             ret = CVAlgorithms.MV_EntryPoint(0, str, ref reParam[0]);

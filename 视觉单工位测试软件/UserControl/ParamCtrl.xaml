@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:hc="https://handyorg.github.io/handycontrol"
              xmlns:local="clr-namespace:视觉单工位测试软件"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
              FontSize="15"
              d:DesignWidth="200">
@@ -112,6 +113,7 @@
                                SelectedIndex="{Binding SelectedAlg,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                IsScrollable="True"
                                ShowScrollButton="True">
+                    
                     <hc:TabItem Header="功能1">
                         <TabItem.Visibility>
                             <MultiBinding Converter="{StaticResource TabNumConv}">
@@ -210,14 +212,16 @@
 
                     <GroupBox Header="算法流程">
                         <ListBox Height="200" 
-                                 DisplayMemberPath="Name_C" 
-                                 SelectedValuePath="ID_C" 
+                                 SelectedValuePath="ID_C"
+                                 DisplayMemberPath="Name_C"
                                  SelectedIndex="{Binding SelectedItem.SelectedNode,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                  ItemsSource="{Binding SelectedItem.ProList,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
                             <ListBox.ContextMenu>
                                 <ContextMenu>
-                                    <MenuItem Name="qwe" Header="添加" Width="200" Command="{Binding SelectedItem.AddCommand}"/>
-                                    <MenuItem Name="asd" Header="删除" Width="200" Command="{Binding SelectedItem.DelCommand}"/>
+                                    <MenuItem Header="修改" Width="200" Command="{Binding SelectedItem.SelCommand}"/>
+                                    <MenuItem Header="插入" Width="200" Command="{Binding SelectedItem.AddCommand}"/>
+                                    <MenuItem Header="添加" Width="200" Command="{Binding SelectedItem.AddCommand}"/>
+                                    <MenuItem Header="删除" Width="200" Command="{Binding SelectedItem.DelCommand}"/>
                                 </ContextMenu>
                             </ListBox.ContextMenu>
                         </ListBox>
@@ -225,7 +229,6 @@
 
                     <hc:ScrollViewer  Content="{Binding SelectedItem.strl}">
                     </hc:ScrollViewer>
-
 
                 </StackPanel>
             </StackPanel>

@@ -14,103 +14,18 @@ namespace 视觉单工位测试软件
 {
     public class AlgProViewModel : ViewModelBase
     {
+        #region 构造函数
+
         public AlgProViewModel()
         {
             ProList = new ObservableCollection<myBaseViewModel>();
             SelectedNode = -1;
         }
 
-        /// <summary>
-        /// 保存默认配置
-        /// </summary>
-        void InitErr()
-        {
-            MainWindow.ErrInfo(filePath + "丢失");
-
-            //获得文件路径
-            string localFilePath = "";
-            localFilePath = filePath;
-            try
-            {
-                XDocument xdoc = new XDocument();
-                XDeclaration xdec = new XDeclaration("1.0", "utf-8", "yes");
-                xdoc.Declaration = xdec;
-
-                XElement rootEle;
-                XElement classEle;
-                XElement childEle;
-
-                //添加根节点
-                rootEle = new XElement("AlgConfig");
-                xdoc.Add(rootEle);
-
-                classEle = new XElement("Name", "未命名");
-                rootEle.Add(classEle);
-
-                xdoc.Save(localFilePath);
-            }
-            catch (Exception e)
-            {
-                Growl.Error(filePath + "创建失败！");
-            }
-        }
-
-        /// <summary>
-        /// 初始化
-        /// </summary>
-        /// <param name="path">文件路径</param>
-        /// <param name="Index">文件名</param>
-        public int Init(string path,int Index)
-        {
-            Path = path;
-            filePath = path + "/AlgConfig.xml";
-            if (XmlHelper.Exists(path, "AlgConfig.xml"))
-            {
-                XDocument Config = XDocument.Load(path + "/AlgConfig.xml");
-                int NodeNum = Config.Descendants("Type").Count();
-                Name = Config.Descendants("Name").ElementAt(0).Value;
-
-                for (int i = 0; i < NodeNum; i++)
-                {
-                    int type = int.Parse(Config.Descendants("Type").ElementAt(i).Value);
-                    myBaseViewModel algNode = null;
-                    switch (type)
-                    {
-                        case 0:  break;
-                        case 1: algNode = new LocationViewModel(); break;
-                        case 2: algNode = new MatchViewModel(); break;
-                        case 3: algNode = new AngleViewModel(); break;
-                        case 4: break;
-                        case 5: break;
-                        case 6: break;
-                        case 7: break;
-                        default:
-                            break;
-                    }
-                    algNode.Init(Path + "/Node" + (i + 1) + ".xml");
-                    ProList.Add(algNode);
-                }
-            }
-            else
-            {
-                Growl.Error("算法" + Index + "初始化失败！");
-                InitErr();
-                return 1;
-            }
-
-            return 0;
-        }
+        #endregion
         
-        /// <summary>
-        /// 参数保存路径
-        /// </summary>
-        string filePath;
+        #region 绑定参数
 
-        /// <summary>
-        /// 参数保存文件夹
-        /// </summary>
-        string Path;
-        
         /// <summary>
         /// 功能名称
         /// </summary>
@@ -151,9 +66,35 @@ namespace 视觉单工位测试软件
             get => GetProperty(() => SelectedNode);
             set => SetProperty(() => SelectedNode, value,()=> 
             {
-                if (SelectedNode >= 0)
-                {
-                    #region 侧边栏显示
+                
+            });
+        }
+
+        /// <summary>
+        /// 功能名称
+        /// </summary>
+        public UserControl strl
+        {
+            get => GetProperty(() => strl);
+            set => SetProperty(() => strl, value);
+        }
+
+        #endregion
+
+        #region 绑定方法
+
+        /// <summary>
+        /// 算法节点选择
+        /// </summary>
+        /// <param name="obj"></param>
+        [AsyncCommand]
+        public void SelCommand(object obj)
+        {
+            Growl.Info("算法节点选择");
+
+            if (SelectedNode >= 0)
+            {
+                #region 侧边栏显示
 #if false
                     switch (ProList[SelectedNode].ClassType)
                     {
@@ -165,55 +106,50 @@ namespace 视觉单工位测试软件
                     }
                     strl.DataContext = ProList[SelectedNode];
 #endif
-                    #endregion
+                #endregion
 
-                    #region 弹出窗显示
+                #region 弹出窗显示
 #if true
 
-                    UserControl str2;
-                    Grid view = new Grid()
-                    {
-                        Width = 400
-                    };
-                    switch (ProList[SelectedNode].ClassType)
-                    {
-                        case 1: str2 = new LocationCtrl(); break;
-                        case 2: str2 = new MatchCtrl(); break;
-                        case 3: str2 = new AngleContrl(); break;
-                        default:
-                            str2 = new AngleContrl(); break;
-                    }
-                    ProList[SelectedNode].Authority = System.Windows.Visibility.Visible;
-                    str2.DataContext = ProList[SelectedNode];
-
-                    str2.Margin = new System.Windows.Thickness(10);
-                    view.Children.Add(str2);
-
-                    var window = new PopupWindow
-                    {
-                        Topmost = true,
-                        PopupElement = view,
-                        WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen,
-                        AllowsTransparency = true,
-                        WindowStyle = System.Windows.WindowStyle.None,
-                        MinWidth = 0,
-                        MinHeight = 0,
-                        Title = "参数设置",
-                    };
-                    window.Show();
-#endif
-                    #endregion
+                UserControl str2;
+                Grid view = new Grid()
+                {
+                    Width = 400
+                };
+                switch (ProList[SelectedNode].ClassType)
+                {
+                    case 1: str2 = new LocationCtrl(); break;
+                    case 2: str2 = new MatchCtrl(); break;
+                    case 3: str2 = new AngleContrl(); break;
+                    default:
+                        str2 = new AngleContrl(); break;
                 }
-            });
-        }
+                ProList[SelectedNode].Authority = System.Windows.Visibility.Visible;
+                str2.DataContext = ProList[SelectedNode];
 
-        /// <summary>
-        /// 功能名称
-        /// </summary>
-        public UserControl strl
-        {
-            get => GetProperty(() => strl);
-            set => SetProperty(() => strl, value);
+                str2.Margin = new System.Windows.Thickness(10);
+                view.Children.Add(str2);
+
+
+                if (window != null)
+                {
+                    window.Close();
+                }
+                window = new PopupWindow
+                {
+                    Topmost = true,
+                    PopupElement = view,
+                    WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen,
+                    AllowsTransparency = true,
+                    WindowStyle = System.Windows.WindowStyle.None,
+                    MinWidth = 0,
+                    MinHeight = 0,
+                    Title = ProList[SelectedNode].Name_C,
+                };
+                window.Show();
+#endif
+                #endregion
+            }
         }
 
         /// <summary>
@@ -257,6 +193,10 @@ namespace 视觉单工位测试软件
             Save();
         }
 
+        #endregion
+
+        #region 公有方法
+        
         /// <summary>
         /// 保存算法流程树
         /// </summary>
@@ -301,5 +241,107 @@ namespace 视觉单工位测试软件
             
             
         }
+
+        /// <summary>
+        /// 保存默认配置
+        /// </summary>
+        void InitErr()
+        {
+            MainWindow.ErrInfo(filePath + "丢失");
+
+            //获得文件路径
+            string localFilePath = "";
+            localFilePath = filePath;
+            try
+            {
+                XDocument xdoc = new XDocument();
+                XDeclaration xdec = new XDeclaration("1.0", "utf-8", "yes");
+                xdoc.Declaration = xdec;
+
+                XElement rootEle;
+                XElement classEle;
+                XElement childEle;
+
+                //添加根节点
+                rootEle = new XElement("AlgConfig");
+                xdoc.Add(rootEle);
+
+                classEle = new XElement("Name", "未命名");
+                rootEle.Add(classEle);
+
+                xdoc.Save(localFilePath);
+            }
+            catch (Exception e)
+            {
+                Growl.Error(filePath + "创建失败！");
+            }
+        }
+
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        /// <param name="path">文件路径</param>
+        /// <param name="Index">文件名</param>
+        public int Init(string path, int Index)
+        {
+            Path = path;
+            filePath = path + "/AlgConfig.xml";
+            if (XmlHelper.Exists(path, "AlgConfig.xml"))
+            {
+                XDocument Config = XDocument.Load(path + "/AlgConfig.xml");
+                int NodeNum = Config.Descendants("Type").Count();
+                Name = Config.Descendants("Name").ElementAt(0).Value;
+
+                for (int i = 0; i < NodeNum; i++)
+                {
+                    int type = int.Parse(Config.Descendants("Type").ElementAt(i).Value);
+                    myBaseViewModel algNode = null;
+                    switch (type)
+                    {
+                        case 0: break;
+                        case 1: algNode = new LocationViewModel(); break;
+                        case 2: algNode = new MatchViewModel(); break;
+                        case 3: algNode = new AngleViewModel(); break;
+                        case 4: break;
+                        case 5: break;
+                        case 6: break;
+                        case 7: break;
+                        default:
+                            break;
+                    }
+                    algNode.Init(Path + "/Node" + (i + 1) + ".xml");
+                    ProList.Add(algNode);
+                }
+            }
+            else
+            {
+                Growl.Error("算法" + Index + "初始化失败！");
+                InitErr();
+                return 1;
+            }
+
+            return 0;
+        }
+
+        #endregion
+
+        #region 公有参数
+        
+        /// <summary>
+        /// 参数保存路径
+        /// </summary>
+        string filePath;
+
+        /// <summary>
+        /// 参数保存文件夹
+        /// </summary>
+        string Path;
+
+        /// <summary>
+        /// 弹出框实体
+        /// </summary>
+        PopupWindow window;
+
+        #endregion
     }
 }

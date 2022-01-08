@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Node>
+  <isGray>0</isGray>
   <IsShow>1</IsShow>
-  <DefaultX>1</DefaultX>
-  <DefaultY>2</DefaultY>
-  <Scale>0</Scale>
-  <MaxOffset>0</MaxOffset>
-  <MaxRadius>4</MaxRadius>
-  <MinRadius>5</MinRadius>
-  <Threshold>128</Threshold>
+  <MaxRadius>371</MaxRadius>
+  <MinRadius>354</MinRadius>
+  <Threshold>0</Threshold>
+  <Threshold_INV>44.25978</Threshold_INV>
+  <MatchingRate>0.454146683</MatchingRate>
+  <Color>3</Color>
+  <Name>涂墨</Name>
+  <ErrInf>涂墨异常</ErrInf>
 </Node>

@@ -14,11 +14,11 @@ namespace 视觉单工位测试软件
         #region 构建函数
         public AngleViewModel()
         {
-            Name_C = "极坐标缺口查找";
+            Name_C = "单缺口查找";
             Authority = Visibility.Collapsed;
             ClassType = 3;
 
-            isGray = 0;
+            isGray = -1;
             Threshold = int.MaxValue;
             Threshold_INV = int.MaxValue;
             MaxRadius = int.MaxValue;
@@ -155,6 +155,14 @@ namespace 视觉单工位测试软件
 
         public override int Function()
         {
+            str[0] = isGray.ToString();
+            str[1] = Threshold.ToString();
+            str[2] = Threshold_INV.ToString();
+            str[3] = MaxRadius.ToString();
+            str[4] = MinRadius.ToString();
+            str[5] = MaxLen.ToString();
+            str[6] = MinLen.ToString();
+
             float[] reParam = new float[2];
             bool ret = CVAlgorithms.MV_EntryPoint(2, str, ref reParam[0]);
 

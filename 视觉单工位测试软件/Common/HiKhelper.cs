@@ -255,6 +255,7 @@ namespace 视觉单工位测试软件
             public int height;
             public int pUser;
             public int CameraNum;
+            public int nFrameLen;
 
         }
 
@@ -307,6 +308,7 @@ namespace 视觉单工位测试软件
                                   width = (int)pFrameInfo.nWidth,
                                   height = (int)pFrameInfo.nHeight,
                                   pUser = (int)0,
+                                  nFrameLen = (int)pFrameInfo.nFrameLen
                               });
             }
         }

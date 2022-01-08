@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Node>
-  <IsShow>0</IsShow>
-  <DefaultX>1000</DefaultX>
-  <DefaultY>200</DefaultY>
-  <Scale>300</Scale>
-  <MaxOffset>0</MaxOffset>
-  <MaxRadius>0</MaxRadius>
-  <MinRadius>0</MinRadius>
-  <Threshold>10.924015</Threshold>
+  <IsShow>1</IsShow>
+  <DefaultX>638</DefaultX>
+  <DefaultY>514</DefaultY>
+  <Scale>0</Scale>
+  <MaxOffset>0.001</MaxOffset>
+  <MaxRadius>394</MaxRadius>
+  <MinRadius>337</MinRadius>
+  <Threshold>245.691711</Threshold>
 </Node>

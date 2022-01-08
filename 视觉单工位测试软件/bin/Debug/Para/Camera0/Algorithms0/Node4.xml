@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Node>
-  <isGray>0</isGray>
+  <isGray>1</isGray>
+  <IsShow>1</IsShow>
+  <MaxRadius>200</MaxRadius>
+  <MinRadius>100</MinRadius>
   <Threshold>0</Threshold>
-  <Threshold_INV>153</Threshold_INV>
-  <MaxRadius>2147483647</MaxRadius>
-  <MinRadius>2147483647</MinRadius>
-  <MaxLen>360</MaxLen>
-  <MinLen>0</MinLen>
+  <Threshold_INV>255</Threshold_INV>
+  <MatchingRate>0</MatchingRate>
+  <Color>-1</Color>
+  <Name>功能未存在</Name>
+  <ErrInf>未存在功能</ErrInf>
 </Node>
